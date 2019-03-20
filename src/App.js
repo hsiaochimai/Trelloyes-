@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import List from "./List.js"
 import './App.css';
-
+// state component
 class App extends Component {
   static defaultProps={
     store:{

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<section
+  class="List"
+>
+  <header
+    class="List-header"
+  >
+    <h2 />
+  </header>
+  <div
+    class="List-cards"
+  >
+    <button
+      className="List-add-button"
+      type="button"
+    >
+      + Add Random Card
+    </button>
+  </div>
+</section>
+`;
