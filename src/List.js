@@ -1,23 +1,26 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import Card from "./Card.js"
 import './List.css'
 
-export default function List(props){
-    return(
-    <section class="List">
-      <header class="List-header">
+
+
+export default function List(props) {
+  return (
+    <section className="List">
+      <header className="List-header">
         <h2>{props.header}</h2>
       </header>
-      <div class="List-cards">
-      {props.cards.map((card)=>
-        <Card 
-        key={card.id}
-        title= {card.title}
-        content={card.content}
-        />
-       )}
-       
-       <button
+      <div className="List-cards">
+        {props.cards.map((card, index) =>
+          <Card
+            key={`card-${index}`}
+            title={card.title}
+            content={card.content}
+          />
+        )}
+
+        <button
           type='button'
           className='List-add-button'
         >
@@ -25,5 +28,10 @@ export default function List(props){
         </button>
       </div>
     </section>
-    )
+  )
+}
+
+List.propTypes = {
+  cards: propTypes.array.isRequired,
+  heading: propTypes.string,
 }
