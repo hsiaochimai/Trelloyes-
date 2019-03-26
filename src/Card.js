@@ -5,6 +5,7 @@ return (
 <div className='Card'>
 <button
         type='button'
+        onClick={props.onDelete}
       >
         delete
       </button>
